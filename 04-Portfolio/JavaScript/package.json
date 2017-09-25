@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Portfolio.test.js",
+  "scripts": {
+    "test": "mocha -u tdd Portfolio.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.5.3"
+  }
+}
