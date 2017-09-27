@@ -15,8 +15,14 @@
 ///*
 require ('./Deposit.js');
 require ('./Withdraw.js');
+require ('./Transfer.js');
+require ('./CertificateOfDeposit.js');
 require ('./ReceptiveAccount.js');
 require ('./Portfolio.js');
+require ('./SummaryPrinterVisitor.js');
+require ('./TransferNetCalculatorVisitor.js');
+require ('./InvestmentCalculatorVisitor.js');
+require ('./InvestmentEarningsCalculatorVisitor.js');
 
 var assert = require('assert');
 // Descomentar linea siguiente para correr en Plunker
@@ -360,7 +366,7 @@ suite('PortfolioTest',function() {
     });
 
     function investmentEarnings(account) {
-        this.shouldImplement();
+        return account.accept(new InvestmentEarningsCalculatorVisitor());
     };
 
 

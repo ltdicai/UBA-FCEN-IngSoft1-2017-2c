@@ -8,7 +8,6 @@ InvestmentCalculatorVisitor = function () {
 InvestmentCalculatorVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 InvestmentCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccount) {
-	debugger;
 	let allTransactions = anAccount.transactions(),
 		net = 0;
 	for(let idx = 0; idx < allTransactions.length; ++idx) {
