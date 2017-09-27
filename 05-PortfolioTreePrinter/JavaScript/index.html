@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link data-require="mocha" data-semver="1.13.0" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.css" />
+    <script data-require="mocha" data-semver="1.13.0" src="//cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.js"></script>
+    <script data-require="chaijs" data-semver="1.10.0" src="//cdnjs.cloudflare.com/ajax/libs/chai/1.10.0/chai.min.js"></script>
+    <style>
+        #mocha {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        #mocha .test {overflow: auto}
+    </style>
+</head>
+
+<body>
+<div id="mocha"></div>
+<script>
+    var require = require || function(param){
+        if (param === 'assert') return chai.assert;
+    };
+    var assert = assert || chai.assert;
+    console.clear();
+    mocha.setup('tdd');
+</script>
+<script src="Object.js"></script>
+<script src="AccountTransaction.js"></script>
+<script src="Deposit.js"></script>
+<script src="Withdraw.js"></script>
+<script src="DepositLeg.js"></script>
+<script src="WithdrawLeg.js"></script>
+<script src="Transfer.js"></script>
+<script src="CertificateOfDeposit.js"></script>
+<script src="SummarizingAccount.js"></script>
+<script src="Portfolio.js"></script>
+<script src="ReceptiveAccount.js"></script>
+<script src="OperationVisitor.js"></script>
+<script src="SummaryPrinterVisitor.js"></script>
+<script src="TransferNetCalculatorVisitor.js"></script>
+<script src="InvestmentCalculatorVisitor.js"></script>
+<script src="Portfolio.test.js"></script>
+<script>mocha.run()</script>
+</body>
+</html>
