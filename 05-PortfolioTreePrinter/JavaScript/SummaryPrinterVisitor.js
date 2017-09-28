@@ -7,12 +7,8 @@ SummaryPrinterVisitor = function () {
 SummaryPrinterVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 SummaryPrinterVisitor.prototype.visitReceptiveAccount = function(anAccount) {
-	let allTransactions = anAccount.transactions(),
-		summary = [];
-	for(let idx = 0; idx < allTransactions.length; ++idx) {
-		summary.push(allTransactions[idx].accept(this));
-	}
-	return summary;
+	return anAccount.transactions().reduce(
+		(summary, aTransaction) => summary.concat(aTransaction.accept(this)), []);
 };
 
 SummaryPrinterVisitor.prototype.visitPortfolio = function(anAccount, managedAccount) {

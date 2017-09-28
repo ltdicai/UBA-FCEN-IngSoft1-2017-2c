@@ -14,7 +14,6 @@ Transfer.registerFor = function (value,fromAccount, toAccount) {
     let transfer = new Transfer(value);
     fromAccount.register(transfer.withdrawLeg());
     toAccount.register(transfer.depositLeg());
-
     return transfer;
 };
 

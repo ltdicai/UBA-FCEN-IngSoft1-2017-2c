@@ -7,12 +7,8 @@ TransferNetCalculatorVisitor = function () {
 TransferNetCalculatorVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 TransferNetCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccount) {
-	let allTransactions = anAccount.transactions(),
-		net = 0;
-	for(let idx = 0; idx < allTransactions.length; ++idx) {
-		net += allTransactions[idx].accept(this);
-	}
-	return net;
+	return anAccount.transactions().reduce(
+		(netAmount, aTransaction) => netAmount + aTransaction.accept(this), 0);
 };
 
 TransferNetCalculatorVisitor.prototype.visitPortfolio = function(anAccount, managedAccounts) {

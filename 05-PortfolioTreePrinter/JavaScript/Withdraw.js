@@ -19,8 +19,6 @@ Withdraw.prototype = Object.create(AccountTransaction.prototype);
 Withdraw.registerForOn = function (value,account) {
     var deposit = new Withdraw(value);
     account.register(deposit);
-
-
     return deposit;
 };
 
