@@ -23,6 +23,8 @@ require ('./SummaryPrinterVisitor.js');
 require ('./TransferNetCalculatorVisitor.js');
 require ('./InvestmentCalculatorVisitor.js');
 require ('./InvestmentEarningsCalculatorVisitor.js');
+require ('./PortfolioTreePrinterVisitor.js');
+require ('./ReversePortfolioTreePrinterVisitor');
 
 var assert = require('assert');
 // Descomentar linea siguiente para correr en Plunker
