@@ -4,7 +4,6 @@ InvestmentCalculatorVisitor = function () {
 	OperationVisitor.call(this);
 };
 
-
 InvestmentCalculatorVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 InvestmentCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccount) {
@@ -14,6 +13,10 @@ InvestmentCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccount
 		net += allTransactions[idx].accept(this);
 	}
 	return net;
+};
+
+InvestmentCalculatorVisitor.prototype.visitPortfolio = function(anAccount, managedAccount) {
+	throw new Error(OperationVisitor.prototype.INVALID_PARAMETERS);
 };
 
 InvestmentCalculatorVisitor.prototype.visitDeposit = function(aDeposit) {

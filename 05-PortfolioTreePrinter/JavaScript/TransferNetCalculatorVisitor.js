@@ -4,7 +4,6 @@ TransferNetCalculatorVisitor = function () {
 	OperationVisitor.call(this);
 };
 
-
 TransferNetCalculatorVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 TransferNetCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccount) {
@@ -14,6 +13,10 @@ TransferNetCalculatorVisitor.prototype.visitReceptiveAccount = function(anAccoun
 		net += allTransactions[idx].accept(this);
 	}
 	return net;
+};
+
+TransferNetCalculatorVisitor.prototype.visitPortfolio = function(anAccount, managedAccounts) {
+	throw new Error(OperationVisitor.prototype.INVALID_PARAMETERS);
 };
 
 TransferNetCalculatorVisitor.prototype.visitDeposit = function(aDeposit) {

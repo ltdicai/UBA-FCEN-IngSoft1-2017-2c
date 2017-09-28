@@ -430,7 +430,7 @@ suite('PortfolioTest',function() {
     });
 
     function portofolioTreeOf(composedPortfolio, accountNames) {
-        this.shouldImplement();
+        return composedPortfolio.accept(new PortfolioTreePrinterVisitor(accountNames));
     };
 
 
@@ -460,6 +460,6 @@ suite('PortfolioTest',function() {
     });
 
     function reversePortofolioTreeOf(composedPortfolio, accountNames) {
-        this.shouldImplement();
+        return composedPortfolio.accept(new ReversePortfolioTreePrinterVisitor(accountNames));
     };
 });

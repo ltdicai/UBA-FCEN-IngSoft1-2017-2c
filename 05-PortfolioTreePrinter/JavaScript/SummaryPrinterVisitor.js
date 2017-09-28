@@ -4,7 +4,6 @@ SummaryPrinterVisitor = function () {
 	OperationVisitor.call(this);
 };
 
-
 SummaryPrinterVisitor.prototype = Object.create(OperationVisitor.prototype);
 
 SummaryPrinterVisitor.prototype.visitReceptiveAccount = function(anAccount) {
@@ -14,6 +13,10 @@ SummaryPrinterVisitor.prototype.visitReceptiveAccount = function(anAccount) {
 		summary.push(allTransactions[idx].accept(this));
 	}
 	return summary;
+};
+
+SummaryPrinterVisitor.prototype.visitPortfolio = function(anAccount, managedAccount) {
+	throw new Error(OperationVisitor.prototype.INVALID_PARAMETERS);
 };
 
 SummaryPrinterVisitor.prototype.visitDeposit = function(aDeposit) {

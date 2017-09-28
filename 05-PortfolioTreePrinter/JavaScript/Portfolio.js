@@ -62,3 +62,7 @@ Portfolio.prototype.addAccount = function (account) {
         () => this._summarizingAccounts.push(account)
     )
 };
+
+Portfolio.prototype.accept = function (aVisitor) {
+    return aVisitor.visitPortfolio(this, this._summarizingAccounts); //Mmmm
+}
