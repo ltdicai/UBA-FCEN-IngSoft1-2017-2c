@@ -17,7 +17,6 @@ ElevatorWorkingState = function (context){
 
 ElevatorWorkingState.prototype = Object.create(ElevatorState.prototype);
 
-
 //Elevator state
 ElevatorWorkingState.prototype.isIdle = function () {
     return false;
@@ -36,12 +35,10 @@ ElevatorWorkingState.prototype.closeCabinDoor = function () {
     this.context.closeCabinDoorWhenWorking();
 };
 
-ElevatorWorkingState.prototype.cabinReachedTargetFloor = function () {
-};
+ElevatorWorkingState.prototype.cabinReachedTargetFloor = function () {};
 
 ElevatorWorkingState.prototype.goUpPushedFromFloor = function (aFloorNumber) {
 	this.context.state = new ElevatorWorkingQueueState(this.context);
-	this.context.goUpPushedFromFloorWhenWorking();
 };
 
 // Sensors

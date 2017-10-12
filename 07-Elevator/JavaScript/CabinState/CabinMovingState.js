@@ -9,14 +9,18 @@
  *
  */
 require ('./Object.js');
+
 require ('./CabinState.js');
+require ('./CabinWaitingState.js');
 require ('./CabinStoppedState.js');
 
 CabinMovingState = function (context) {
     CabinState.call(this, context);
 };
 
+CabinMovingState.prototype = Object.create(CabinState.prototype);
 
+// Cabin state
 CabinMovingState.prototype.isStopped = function () {
     return false;
 };
@@ -29,9 +33,7 @@ CabinMovingState.prototype.isWaitingForPeople = function () {
 	return false;
 };
 
-CabinMovingState.prototype.startClosing = function () {
-};
-
+// Cabin state change
 CabinMovingState.prototype.move = function () {
 }
 

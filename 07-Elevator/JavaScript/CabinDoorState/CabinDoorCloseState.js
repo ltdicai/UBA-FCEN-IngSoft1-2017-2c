@@ -16,6 +16,8 @@ CabinDoorCloseState = function (context) {
     CabinDoorState.call(this, context);
 };
 
+CabinDoorCloseState.prototype = Object.create(CabinDoorState.prototype);
+
 CabinDoorCloseState.prototype.isOpened = function () {
     return false;
 };

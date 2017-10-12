@@ -70,10 +70,7 @@ Elevator.prototype.goUpPushedFromFloor = function (aFloorNumber) {
 
 Elevator.prototype.goUpPushedFromFloorWhenIdle = function () {
     this.closeCabinDoor();
-}
-
-Elevator.prototype.goUpPushedFromFloorWhenWorking = function() {
-}
+};
 
 Elevator.prototype.openCabinDoor = function () {
     this.cabin.openDoor();
@@ -81,10 +78,6 @@ Elevator.prototype.openCabinDoor = function () {
 
 Elevator.prototype.closeCabinDoor = function () {
     this.state.closeCabinDoor();
-};
-
-Elevator.prototype.closeCabinDoorWhenIdle = function () {
-    // Do Nothing
 };
 
 Elevator.prototype.closeCabinDoorWhenWorking = function () {

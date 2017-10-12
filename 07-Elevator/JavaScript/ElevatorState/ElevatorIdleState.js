@@ -29,20 +29,15 @@ ElevatorIdleState.prototype.isWorking = function () {
 };
 
 
-ElevatorIdleState.prototype.beIdle = function () {
-    
-};
+ElevatorIdleState.prototype.beIdle = function () {};
 
 // Buttons
-ElevatorIdleState.prototype.closeCabinDoor = function () {
-    this.context.closeCabinDoorWhenIdle();
-};
+ElevatorIdleState.prototype.closeCabinDoor = function () {};
 
 ElevatorIdleState.prototype.goUpPushedFromFloor = function (aFloorNumber) {
     this.context.state = new ElevatorWorkingState(this.context);
     this.context.goUpPushedFromFloorWhenIdle();
 };
 
-ElevatorIdleState.prototype.cabinDoorOpened = function () {
-};
+ElevatorIdleState.prototype.cabinDoorOpened = function () {};
 
