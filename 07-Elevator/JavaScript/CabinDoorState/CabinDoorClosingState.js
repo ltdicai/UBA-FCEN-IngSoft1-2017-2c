@@ -9,7 +9,6 @@
  *  
  */
 
-require ('./Object.js');
 require ('./CabinDoorState.js');
 
 CabinDoorClosingState = function (context) {
@@ -46,6 +45,3 @@ CabinDoorClosingState.prototype.closed = function () {
     this.context.state = new CabinDoorCloseState(this.context);
 };
 
-CabinDoorClosingState.prototype.opened = function () {
-    throw new Error('Invalid state');
-};

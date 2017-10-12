@@ -11,6 +11,7 @@
 require ('./Object.js');
 require ('./CabinDoor.js');
 require ('./Motor.js');
+require ('./CabinState/CabinStoppedState.js');
 
 Cabin = function (elevator) {
     this.elevator = elevator;

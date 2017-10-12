@@ -8,9 +8,7 @@
  * California, 94041, USA.
  *  
  */
-require ('./Object.js');
 require ('./ElevatorState.js');
-require ('./ElevatorWorkingState.js');
 
 ElevatorIdleState = function (context){
     ElevatorState.call(this, context);

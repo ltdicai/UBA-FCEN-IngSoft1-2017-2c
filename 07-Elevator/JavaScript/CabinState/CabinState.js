@@ -8,11 +8,15 @@
  * California, 94041, USA.
  *
  */
-require ('./Object.js');
+require ('../Object.js');
 
 CabinState = function (context) {
 	this.context = context;
 };
+
+require ('./CabinMovingState.js');
+require ('./CabinStoppedState.js');
+require ('./CabinWaitingState.js');
 
 
 CabinState.prototype.isStopped = function () {

@@ -8,12 +8,15 @@
  * California, 94041, USA.
  *  
  */
-require ('./Object.js');
+require ('../Object.js');
 
 ElevatorState = function (context){
 	this.context = context;
 };
 
+require ('./ElevatorIdleState.js');
+require ('./ElevatorWorkingState.js');
+require ('./ElevatorWorkingQueueState.js');
 
 //Elevator state
 ElevatorState.prototype.isIdle = function () {

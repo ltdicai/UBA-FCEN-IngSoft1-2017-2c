@@ -9,12 +9,16 @@
  *  
  */
 
-require ('./Object.js');
-require ('./Motor.js');
+require ('../Object.js');
 
 CabinDoorState = function (context) {
 	this.context = context;
 };
+
+require ('./CabinDoorOpenState.js');
+require ('./CabinDoorCloseState.js');
+require ('./CabinDoorOpeningState.js');
+require ('./CabinDoorClosingState.js');
 
 //State
 CabinDoorState.prototype.isOpened = function () {

@@ -10,6 +10,7 @@
  */
 require ('./Object.js');
 require ('./Cabin.js');
+require ('./ElevatorState/ElevatorIdleState.js');
 
 Elevator = function (){
     this.cabin = new Cabin(this);

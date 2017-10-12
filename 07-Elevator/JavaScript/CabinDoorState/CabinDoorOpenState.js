@@ -9,9 +9,7 @@
  *  
  */
 
-require ('./Object.js');
 require ('./CabinDoorState.js');
-require ('./CabinDoorClosingState.js');
 
 CabinDoorOpenState = function (context) {
     CabinDoorState.call(this, context);

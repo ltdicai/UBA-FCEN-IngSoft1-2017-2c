@@ -8,11 +8,7 @@
  * California, 94041, USA.
  *
  */
-require ('./Object.js');
-require ('./Cabin.js');
 require ('./CabinState.js');
-require ('./CabinMovingState.js');
-require ('./CabinWaitingState.js');
 
 CabinStoppedState = function (context) {
     CabinState.call(this, context);
